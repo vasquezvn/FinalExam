@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 
@@ -173,6 +174,7 @@ namespace ConsoleFinalExam.Pages
             try
             {
                 txtAreaMessage.SendKeys(message);
+                txtAreaMessage.SendKeys(Keys.Tab);
             }
             catch (Exception ex)
             {
@@ -185,6 +187,11 @@ namespace ConsoleFinalExam.Pages
         public ContactUsCommand PressSubmitButton()
         {
             Helper.WaitUntilElementClickable(locatorBtnSubmit);
+            Helper.ScrollToView(locatorBtnSubmit);
+
+            //Actions actions = new Actions(Driver.Instance);
+            //actions.MoveToElement(btnSubmit);
+            //actions.Perform();
 
             try
             {
