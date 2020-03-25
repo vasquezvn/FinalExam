@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam", "FinalExam\Fina
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleFinalExam", "ConsoleFinalExam\ConsoleFinalExam.csproj", "{24B92A98-C3A2-4B6D-9674-02BE0975F7D8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiFinalExam", "ApiFinalExam\ApiFinalExam.csproj", "{EEB9803B-DE22-4FBF-B5F9-1E02A5AB729D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{24B92A98-C3A2-4B6D-9674-02BE0975F7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{24B92A98-C3A2-4B6D-9674-02BE0975F7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{24B92A98-C3A2-4B6D-9674-02BE0975F7D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEB9803B-DE22-4FBF-B5F9-1E02A5AB729D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEB9803B-DE22-4FBF-B5F9-1E02A5AB729D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEB9803B-DE22-4FBF-B5F9-1E02A5AB729D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEB9803B-DE22-4FBF-B5F9-1E02A5AB729D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
