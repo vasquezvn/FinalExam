@@ -117,7 +117,7 @@ namespace ConsoleFinalExam
         {
             if (element.Location.Y > 200)
             {
-                ScrollTo(0, element.Location.Y - 50);
+                ScrollTo(0, element.Location.Y - 100);
             }
         }
 

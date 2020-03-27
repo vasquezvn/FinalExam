@@ -56,6 +56,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ApiFinalExam\ApiFinalExam.csproj">
+      <Project>{eeb9803b-de22-4fbf-b5f9-1e02a5ab729d}</Project>
+      <Name>ApiFinalExam</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ConsoleFinalExam\ConsoleFinalExam.csproj">
       <Project>{24b92a98-c3a2-4b6d-9674-02be0975f7d8}</Project>
       <Name>ConsoleFinalExam</Name>
