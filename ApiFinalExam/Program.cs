@@ -8,25 +8,26 @@ namespace ApiFinalExam
 {
     public class Program
     {
+
         HttpClient client = new HttpClient();
         private Student studentJson = new Student();
 
         static async Task Main(string[] args)
         {
             Program p = new Program();
-            await p.GetStudentById(1);
+            //await p.GetStudentById(1);
 
-            //var expectedStudent = new Student()
-            //{
-            //    id = 1,
-            //    firstName = "Vernon",
-            //    lastName = "Harper",
-            //    email = "egestas.rhoncus.Proin@massaQuisqueporttitor.org",
-            //    programme = "Financial Analysis",
-            //    courses = new string[] { "Accounting", "Statistics" }
-            //};
+            var expectedStudent = new Student()
+            {
+                id = 123,
+                firstName = "Vernona",
+                lastName = "Harper",
+                email = "egestas.rhoncus.Proin@massaQuisqueporttitor.org",
+                programme = "Financial Analysis",
+                courses = new string[] { "Accounting", "Statistics" }
+            };
 
-            //var result = p.IsFirstStudentAsync(expectedStudent);
+            p.IsFirstStudentAsync(expectedStudent).GetAwaiter().GetResult();
 
 
             Console.WriteLine();
@@ -59,7 +60,10 @@ namespace ApiFinalExam
 
         private async Task GetStudentById(int studentId)
         {
-            string jsonString = await client.GetStringAsync("http://localhost:8080/student/list");
+            //client.BaseAddress = new Uri("http://localhost:8080/student/list");
+            var uri = new Uri("http://localhost:8080/student/list");
+
+            var jsonString = await client.GetStringAsync(uri);
             List<Student> json = JsonConvert.DeserializeObject<List<Student>>(jsonString);
 
             foreach (var student in json)
@@ -81,6 +85,8 @@ namespace ApiFinalExam
 
             if (studentJson.id == student.id)
                 result = true;
+
+            Console.WriteLine(result);
 
             return result;
         }
